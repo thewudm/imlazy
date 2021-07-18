@@ -9,4 +9,5 @@ Hopefully, by using this I won't be late for classes again.
 - an infinite for loop is running which carries out all the other processes
 - First, this program checks which day it is and assigns the values of the subjects of each class and the timings.(Exits if it is a Sunday)
 - Second, it checks if the current time (according to the computer) matches the time of any of the classes of that day. 
-- Then, it opens google chrome and makes it fullscreen (so that it doesn't click any other app if chrome is not fullscreen) and goes to the google classroom tab (tab 3). (Note: the fullscreen feature only works for me because i use a tilong window manager called [yabai](https://github.com/koekeishiya/yabai "yabai's github page"))
+- Then, it opens google chrome and makes it fullscreen (so that it doesn't click any other app if chrome is not fullscreen) and goes to the google classroom tab (tab 3). (Note: the fullscreen feature only works for me because I use a tilong window manager called [yabai](https://github.com/koekeishiya/yabai"), for which I have a keybind that makes a particular app fullscreen. Check my [dots](https://github.com/thewudm/dots) to see the yabai and skhd script.)
+-
