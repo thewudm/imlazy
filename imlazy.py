@@ -52,7 +52,7 @@ if daytoday == 'Wednesday':
     class5_sub = 'physics'
 
 if daytoday == 'Thursday':
-    class1 = '07:40' 
+    class1 = '01:36'
     class2 = '09:20'
     class3 = '10:25'
     class4 = '11:15'
@@ -80,7 +80,7 @@ if daytoday == 'Saturday':
     class2 = '08:30'
     class3 = '09:20'
     class4 = '10:25'
-    class5 = '11:15'
+    class5 = '21:41'
     class1_sub = 'physics' 
     class2_sub = 'chemistry'
     class3_sub = 'computer'
@@ -91,256 +91,251 @@ if daytoday == 'Sunday':
     sys.exit() 
 
 
-#url = (pyautogui.locateOnScreen('imgs/url.png'))
-#sidebar = pyautogui.locateOnScreen('imgs/sidebar.png')
-#chemistry = pyautogui.locateOnScreen('imgs/chemistry.png')
-#eng_lang = pyautogui.locateOnScreen('imgs/eng_lang.png')
-#eng_lit = pyautogui.locateOnScreen('imgs/eng_lit.png')
-#math = pyautogui.locateOnScreen('imgs/math.png')
-#physics = pyautogui.locateOnScreen('imgs/physics.png')
-#computer = pyautogui.locateOnScreen('imgs/computer.png')
+url = pyautogui.locateOnScreen('imgs/url.png', grayscale=True, confidence=0.5)
+sidebar = pyautogui.locateOnScreen('imgs/sidebar.png', grayscale=True, confidence=0.5)
+chemistry = pyautogui.locateOnScreen('imgs/chemistry.png', grayscale=True, confidence=0.5)
+eng_lang = pyautogui.locateOnScreen('imgs/eng_lang.png', grayscale=True, confidence=0.5)
+eng_lit = pyautogui.locateOnScreen('imgs/eng_lit.png', grayscale=True, confidence=0.5)
+math = pyautogui.locateOnScreen('imgs/math.png', grayscale=True, confidence=0.5)
+physics = pyautogui.locateOnScreen('imgs/physics.png', grayscale=True, confidence=0.5)
+computer = pyautogui.locateOnScreen('imgs/computer.png', grayscale=True, confidence=0.5)
 
 #Clicking Different buttons and navigating to the link
 while(True):
     print('Running')
     timenow = datetime.now().strftime("%H:%M")
 
-
     #Checking which class it is or if we have a class
     if timenow == class1:
 
-        #Opeining the Chrome app
-        subprocess.Popen(['open', '-a', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'])
+        #Opeining the  app
+        subprocess.Popen(['open', '-a', '/Applications/Firefox.app/Contents/MacOS/Firefox'])
         pyautogui.hotkey('command', 'ctrlleft', 'option', 'shiftleft', 'f')
     
         #Going to google classroom tab
         pyautogui.hotkey('command', '3')
-        pyautogui.moveTo(50, 180)
+        pyautogui.moveTo(sidebar)
         pyautogui.click()
         if class1_sub.lower() == 'chemistry':
-            pyautogui.moveTo(161, 729)
+            pyautogui.moveTo(chemistry)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class1_sub.lower() == 'math':
-            pyautogui.moveTo(167, 489)
+            pyautogui.moveTo(math)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class1_sub.lower() == 'english language':
-            pyautogui.moveTo(180, 674)
+            pyautogui.moveTo(eng_lang)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class1_sub.lower() == 'english literature':
-            pyautogui.moveTo(145, 790)
+            pyautogui.moveTo(eng_lit)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class1_sub.lower() == 'physics':
-            pyautogui.moveTo(166, 543)
+            pyautogui.moveTo(physics)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class1_sub.lower() == 'computer':
-            pyautogui.moveTo(176, 924)
+            pyautogui.moveTo(computer)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
-        continue
+        break
     
     elif timenow == class2:
-        #Opeining the Chrome app
-        subprocess.Popen(['open', '-a', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'])
+        #Opening the  app
+        subprocess.Popen(['open', '-a', '/Applications/Firefox.app/Contents/MacOS/Firefox'])
         pyautogui.hotkey('command', 'ctrlleft', 'option', 'shiftleft', 'f')
 
         #Going to google classroom tab
         pyautogui.hotkey('command', '3')
-        pyautogui.moveTo(50, 180)
+        pyautogui.moveTo(sidebar)
         pyautogui.click()
         if class2_sub.lower() == 'chemistry':
-            pyautogui.moveTo(161, 729)
+            pyautogui.moveTo(chemistry)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class2_sub.lower() == 'math':
-            pyautogui.moveTo(167, 489)
+            pyautogui.moveTo(math)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class2_sub.lower() == 'english language':
-            pyautogui.moveTo(180, 674)
+            pyautogui.moveTo(eng_lang)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class2_sub.lower() == 'english literature':
-            pyautogui.moveTo(145, 790)
+            pyautogui.moveTo(eng_lit)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class2_sub.lower() == 'physics':
-            pyautogui.moveTo(166, 543)
+            pyautogui.moveTo(physics)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class2_sub.lower() == 'computer':
-            pyautogui.moveTo(176, 924)
+            pyautogui.moveTo(computer)
             pyautogui.click()
             #time.sleep(3)
             pyautogui.moveTo(810, 894)
             pyautogui.click()
-        continue
+        break
     
     elif timenow == class3:
-        #Opeining the Chrome app
-        subprocess.Popen(['open', '-a', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'])
+        #Opeining the  app
+        subprocess.Popen(['open', '-a', '/Applications/Firefox.app/Contents/MacOS/Firefox'])
         pyautogui.hotkey('command', 'ctrlleft', 'option', 'shiftleft', 'f')
     
         #Going to google classroom tab
         pyautogui.hotkey('command', '3')
-        pyautogui.moveTo(50, 180)
+        pyautogui.moveTo(sidebar)
         pyautogui.click()
         if class3_sub.lower() == 'chemistry':
-            pyautogui.moveTo(161, 729)
+            pyautogui.moveTo(chemistry)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class3_sub.lower() == 'math':
-            pyautogui.moveTo(167, 489)
+            pyautogui.moveTo(math)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class3_sub.lower() == 'english language':
-            pyautogui.moveTo(180, 674)
+            pyautogui.moveTo(eng_lang)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class3_sub.lower() == 'english literature':
-            pyautogui.moveTo(145, 790)
+            pyautogui.moveTo(eng_lit)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class3_sub.lower() == 'physics':
-            pyautogui.moveTo(166, 543)
+            pyautogui.moveTo(physics)
             pyautogui.click()
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class3_sub.lower() == 'computer':
-            pyautogui.moveTo(176, 924)
+            pyautogui.moveTo(computer)
             pyautogui.click()
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click() 
-        continue
+        break
 
     elif timenow == class4:
-        #Opeining the Chrome app
-        subprocess.Popen(['open', '-a', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'])
+        #Opeining the  app
+        subprocess.Popen(['open', '-a', '/Applications/Firefox.app/Contents/MacOS/Firefox'])
         pyautogui.hotkey('command', 'ctrlleft', 'option', 'shiftleft', 'f')
 
         #Going to google classroom tab
         pyautogui.hotkey('command', '3')
-        pyautogui.moveTo(50, 180)
+        pyautogui.moveTo(sidebar)
         pyautogui.click()
         if class4_sub.lower() == 'chemistry':
-            pyautogui.moveTo(161, 729)
+            pyautogui.moveTo(chemistry)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class4_sub.lower() == 'math':
-            pyautogui.moveTo(167, 489)
+            pyautogui.moveTo(math)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class4_sub.lower() == 'english language':
-            pyautogui.moveTo(180, 674)
+            pyautogui.moveTo(eng_lang)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class4_sub.lower() == 'english literature':
-            pyautogui.moveTo(145, 790)
+            pyautogui.moveTo(eng_lit)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class4_sub.lower() == 'physics':
-            pyautogui.moveTo(166, 543)
+            pyautogui.moveTo(physics)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class4_sub.lower() == 'computer':
-            pyautogui.moveTo(176, 924)
+            pyautogui.moveTo(computer)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()   
-        continue
+        break
     
     elif timenow == class5:
-        #Opeining the Chrome app
-        subprocess.Popen(['open', '-a', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'])
+        #Opeining the  app
+        subprocess.Popen(['open', '-a', '/Applications/Firefox.app/Contents/MacOS/Firefox'])
         pyautogui.hotkey('command', 'ctrlleft', 'option', 'shiftleft', 'f')
     
         #Going to google classroom tab
         pyautogui.hotkey('command', '3')
-        pyautogui.moveTo(50, 180)
+        pyautogui.moveTo(sidebar)
         pyautogui.click()
         if class5_sub.lower() == 'chemistry':
-            pyautogui.moveTo(161, 729)
+            pyautogui.moveTo(chemistry)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class5_sub.lower() == 'math':
-            pyautogui.moveTo(167, 489)
+            pyautogui.moveTo(math)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class5_sub.lower() == 'english language':
-            pyautogui.moveTo(180, 674)
+            pyautogui.moveTo(eng_lang)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class5_sub.lower() == 'english literature':
-            pyautogui.moveTo(145, 790)
+            pyautogui.moveTo(eng_lit)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class5_sub.lower() == 'physics':
-            pyautogui.moveTo(166, 543)
+            pyautogui.moveTo(physics)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()
         elif class5_sub.lower() == 'computer':
-            pyautogui.moveTo(176, 924)
+            pyautogui.moveTo(computer)
             pyautogui.click()
             #time.sleep(3)
-            pyautogui.moveTo(pyautogui.locateOnScreen('imgs/url.png'))
+            pyautogui.moveTo(url)
             pyautogui.click()  
-        continue
-
-
-
-
+        break
